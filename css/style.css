@@ -1,0 +1,32 @@
+.boxes {
+  border-style: solid;
+  border-color: green;
+  border-radius: 25px;
+  background: black;
+  color: green;
+}
+
+.center {
+  text-align: center;
+  padding: 75px;
+  border-color: green;
+  height: 50px;
+  margin: auto;
+}
+
+.bottomSpace {
+  margin-bottom: 70px;
+}
+
+
+.scoreBoard{
+  height:50px;
+  width: 340px;
+  text-align: center;
+  padding-top: 10px;
+  
+}
+
+#move{
+  font-size: 25px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-center">Tic-Tac-Toe</h1>
+      <p class="text-center">by Brian Pedigo 2016<P>
+      <div class="btn-group">
+      
+<!--         <a class="btn btn-success btn-lg" id="reset">reset game</a> -->
+        <a class="btn btn-primary btn-lg" id="playX">play as X</a>
+        <a class="btn btn-danger btn-lg" id="playO">play as O</a>
+      </div>
+      <h4 id="scoreBoard" class=" boxes scoreBoard">The score is human: 0 computer: 0</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-4 boxes">
+      <div class="center lead" id="a1"></div>
+    </div>
+    <div class="col-xs-4 boxes">
+      <p class="center lead " id="a2"></p>
+    </div>
+    <div class="col-xs-4 boxes">
+      <p class="center lead" id="a3"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 boxes">
+      <p class="center lead" id="b1"></p>
+    </div>
+    <div class="col-xs-4 boxes">
+      <p class="center lead" id="b2"></p>
+    </div>
+    <div class="col-xs-4 boxes">
+      <p class="center lead " id="b3"></p>
+    </div>
+  </div>
+  <div class="row bottomSpace">
+    <div class="col-xs-4 boxes">
+      <p class="center lead" id="c1"></p>
+    </div>
+    <div class="col-xs-4 boxes">
+      <p class="center lead" id="c2"></p>
+    </div>
+    <div class="col-xs-4 boxes">
+      <p class="center lead" id="c3"></p>
+    </div>
+  </div>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
