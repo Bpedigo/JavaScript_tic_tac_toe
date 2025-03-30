@@ -1,79 +1,103 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
-    
-    
-    
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
+  <body class="bg-dark text-light">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 mb-4">Tic-Tac-Toe</h1>
+          
+          <!-- Difficulty Selection -->
+          <div class="difficulty-selector mb-4">
+            <h5 class="mb-3">Select Difficulty:</h5>
+            <div class="btn-group" role="group">
+              <button class="btn btn-outline-success" id="easyMode">Easy</button>
+              <button class="btn btn-outline-warning" id="mediumMode">Medium</button>
+              <button class="btn btn-outline-danger" id="hardMode">Hard</button>
+            </div>
+          </div>
 
-    <div class="container">
+          <!-- Game Controls -->
+          <div class="game-controls mb-4">
+            <div class="btn-group" role="group">
+              <button class="btn btn-primary btn-lg" id="playX">Play as X</button>
+              <button class="btn btn-danger btn-lg" id="playO">Play as O</button>
+              <button class="btn btn-success btn-lg" id="reset">Reset Game</button>
+            </div>
+          </div>
 
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="text-center">Tic-Tac-Toe</h1>
-      <p class="text-center">by Brian Pedigo 2016<P>
-      <div class="btn-group">
-      
-<!--         <a class="btn btn-success btn-lg" id="reset">reset game</a> -->
-        <a class="btn btn-primary btn-lg" id="playX">play as X</a>
-        <a class="btn btn-danger btn-lg" id="playO">play as O</a>
+          <!-- Score Board -->
+          <div class="score-container mb-4">
+            <div class="score-board">
+              <div class="score-item">
+                <span class="player-label">Human</span>
+                <span class="player-score" id="humanScore">0</span>
+              </div>
+              <div class="score-divider">-</div>
+              <div class="score-item">
+                <span class="player-label">Computer</span>
+                <span class="player-score" id="computerScore">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game Status -->
+          <div class="game-status mb-4">
+            <h5 id="gameStatus" class="text-muted">Choose your symbol to start playing!</h5>
+          </div>
+        </div>
       </div>
-      <h4 id="scoreBoard" class=" boxes scoreBoard">The score is human: 0 computer: 0</h4>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-4 boxes">
-      <div class="center lead" id="a1"></div>
+      <!-- Game Board -->
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="game-board">
+            <div class="row g-0">
+              <div class="col-4">
+                <div class="game-cell" id="a1"></div>
+              </div>
+              <div class="col-4">
+                <div class="game-cell" id="a2"></div>
+              </div>
+              <div class="col-4">
+                <div class="game-cell" id="a3"></div>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-4">
+                <div class="game-cell" id="b1"></div>
+              </div>
+              <div class="col-4">
+                <div class="game-cell" id="b2"></div>
+              </div>
+              <div class="col-4">
+                <div class="game-cell" id="b3"></div>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-4">
+                <div class="game-cell" id="c1"></div>
+              </div>
+              <div class="col-4">
+                <div class="game-cell" id="c2"></div>
+              </div>
+              <div class="col-4">
+                <div class="game-cell" id="c3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-xs-4 boxes">
-      <p class="center lead " id="a2"></p>
-    </div>
-    <div class="col-xs-4 boxes">
-      <p class="center lead" id="a3"></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-4 boxes">
-      <p class="center lead" id="b1"></p>
-    </div>
-    <div class="col-xs-4 boxes">
-      <p class="center lead" id="b2"></p>
-    </div>
-    <div class="col-xs-4 boxes">
-      <p class="center lead " id="b3"></p>
-    </div>
-  </div>
-  <div class="row bottomSpace">
-    <div class="col-xs-4 boxes">
-      <p class="center lead" id="c1"></p>
-    </div>
-    <div class="col-xs-4 boxes">
-      <p class="center lead" id="c2"></p>
-    </div>
-    <div class="col-xs-4 boxes">
-      <p class="center lead" id="c3"></p>
-    </div>
-  </div>
-</div>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 
-        <script src="js/index.js"></script>
-
-    
-    
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
